@@ -1,0 +1,125 @@
+{
+  "main": {
+    "id": "b473f16fc6bc733b",
+    "type": "split",
+    "children": [
+      {
+        "id": "e0baabfda29c19bf",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ca02bf768600e85d",
+    "type": "split",
+    "children": [
+      {
+        "id": "0436938b63774120",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f2a8ff1a448f0947",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9c80f33a64f6001f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5fbccab94cb00ad4",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "732a5ca0c9e40329",
+    "type": "split",
+    "children": [
+      {
+        "id": "398974144070025e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d358f2cccadcff",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c7390ec2a7bd31da",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c8d05b9afb00ccce",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "f2a8ff1a448f0947",
+  "lastOpenFiles": [
+    "MySQL简介.md",
+    "MySQL必知必会/了解SQL.md",
+    "Python编程从入门到实践/动手试一试/第二章/2-7 删除人名中的空白.md",
+    "Python编程从入门到实践/动手试一试/第二章/2-5 名言.md",
+    "Python编程从入门到实践/基础知识/变量和简单的数据类型.md",
+    "Python编程从入门到实践/基础知识/列表简介.md",
+    "Python编程从入门到实践/动手试一试/第三章/3-8 放眼世界.md",
+    "Python编程从入门到实践/动手试一试/第三章/3-7 缩减名单.md",
+    "Python编程从入门到实践/动手试一试/第三章/3-6 添加嘉宾.md",
+    "Python编程从入门到实践/动手试一试/第三章/3-5 修改嘉宾名单.md"
+  ]
+}
