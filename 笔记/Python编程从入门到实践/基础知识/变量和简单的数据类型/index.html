@@ -542,6 +542,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        操作列表
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -597,6 +611,20 @@
     <li class="md-nav__item">
       <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/" class="md-nav__link">
         列表简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        操作列表
       </a>
     </li>
   
@@ -898,7 +926,7 @@
 <ul>
 <li>变量名只能包含字母、数字、下划线，可以用字母或下划线打头，但是不可以用数字大头 [^变量名目前可以使用Unicode字符进行命名]</li>
 </ul>
-<pre><code class="language-python3">&gt;&gt;&gt; 你好=1
+<pre><code class="language-python">&gt;&gt;&gt; 你好=1
 &gt;&gt;&gt; print(你好)
 1
 </code></pre>
@@ -908,7 +936,7 @@
 <em>慎用小写字母 i 和大写字母O</em></li>
 </ul>
 <h3 id="_3">使用变量时避免命名错误</h3>
-<pre><code class="language-python3">&gt;&gt;&gt; message = &quot;Hello Python Crash Course reader!&quot;
+<pre><code class="language-python">&gt;&gt;&gt; message = &quot;Hello Python Crash Course reader!&quot;
 &gt;&gt;&gt; print(message)
 Hello Python Crash Course reader!
 &gt;&gt;&gt; print(mesage)
@@ -929,26 +957,26 @@ NameError: name 'mesage' is not defined
 <p>字符串就是一系列字符<strong>用引号引起都是字符串，引号可以是单引号也可以是双引号</strong></p>
 <h3 id="_6">使用方法修改字符串的大小写</h3>
 <h4 id="title">title()</h4>
-<pre><code class="language-python3">&gt;&gt;&gt;name = &quot;ada lovelace&quot;
+<pre><code class="language-python">&gt;&gt;&gt;name = &quot;ada lovelace&quot;
 &gt;&gt;&gt;print(name.title())
 Ada Lovelace
 # title()是将每个单词以首字母大写的方式显示
 </code></pre>
 <h4 id="upper">upper()</h4>
-<pre><code class="language-python3">&gt;&gt;&gt;name = &quot;Ada Lovelace&quot;
+<pre><code class="language-python">&gt;&gt;&gt;name = &quot;Ada Lovelace&quot;
 &gt;&gt;&gt;print(name.upper())
 ADA LOVELACE
 # upper()全大写输出
 </code></pre>
 <h4 id="lower">lower()</h4>
-<pre><code class="language-python3">&gt;&gt;&gt;name = &quot;Ada Lovelace&quot;
+<pre><code class="language-python">&gt;&gt;&gt;name = &quot;Ada Lovelace&quot;
 &gt;&gt;&gt;print(name.lower())
 ada lovelace
 # lower()全小写输出
 </code></pre>
 <h3 id="_7">合并(拼接)字符串</h3>
 <p><strong>python使用+号来合并字符串</strong></p>
-<pre><code class="language-python3">&gt;&gt;&gt;name = &quot;Ada Lovelace&quot;
+<pre><code class="language-python">&gt;&gt;&gt;name = &quot;Ada Lovelace&quot;
 &gt;&gt;&gt;last_name = &quot;lovelace&quot;
 &gt;&gt;&gt;full_name = name + &quot; &quot; + last_name
 &gt;&gt;&gt;print(full_name)
@@ -956,12 +984,12 @@ Ada Lovelace lovelace
 </code></pre>
 <h3 id="_8">使用制表符或者换行符来添加空白</h3>
 <p>**空白泛指非打印字符，比如空格、制表符和换行符，可以用空白来组织输出</p>
-<pre><code class="language-python3">&gt;&gt;&gt;print(&quot;Py\tthon&quot;)
+<pre><code class="language-python">&gt;&gt;&gt;print(&quot;Py\tthon&quot;)
 Py      thon
 </code></pre>
 <h3 id="_9">删除空白</h3>
 <p>Python能找出字符串开头和末尾多余的空白。要确保字符串末尾没有空白可以用rstrip()方法</p>
-<pre><code class="language-python3">&gt;&gt;&gt;favorite_language = 'python '
+<pre><code class="language-python">&gt;&gt;&gt;favorite_language = 'python '
 &gt;&gt;&gt;favorite_language
 'python '
 &gt;&gt;&gt;favorite_language.rstrip()
@@ -973,7 +1001,7 @@ Py      thon
 # strip()方法会删除字符串两端的空格
 </code></pre>
 <h3 id="_10">使用字符串时避免语法错误</h3>
-<pre><code class="language-python3">&gt;&gt;&gt;message = &quot;One of Python's strengths is its diverse community.&quot;# 双引号
+<pre><code class="language-python">&gt;&gt;&gt;message = &quot;One of Python's strengths is its diverse community.&quot;# 双引号
 &gt;&gt;&gt;print(message)
 One of Python's strengths is its diverse community.
 &gt;&gt;&gt;message = 'One of Python's strengths is its diverse community.'# 单引号
@@ -981,7 +1009,7 @@ One of Python's strengths is its diverse community.
 File &quot;apostrophe.py&quot;, line 1 message = 'One of Python's strengths is its diverse community.' ^SyntaxError: invalid syntax
 </code></pre>
 <h3 id="python2print">Python2中的print语句</h3>
-<pre><code class="language-python2.7">&gt;&gt;&gt;print &quot;Hello Python 2.7 world&quot;
+<pre><code class="language-python">&gt;&gt;&gt;print &quot;Hello Python 2.7 world&quot;
 Hello Python 2.7 world!
 # 在python2.7中无需将要打印的东西挡在括号内
 </code></pre>
@@ -999,7 +1027,7 @@ Hello Python 2.7 world!
 <h2 id="_12">数字</h2>
 <h3 id="_13">整数</h3>
 <p>Python中可以对整数进行加减乘除运算(两个星号代表乘方运算)，括号的作用更多是改变运算次序的</p>
-<pre><code class="language-pyhton3">&gt;&gt;&gt; 2 + 3
+<pre><code class="language-pyhton">&gt;&gt;&gt; 2 + 3
 5
 &gt;&gt;&gt; 3 - 2
 1
@@ -1012,7 +1040,7 @@ Hello Python 2.7 world!
 </code></pre>
 <h3 id="_14">浮点数</h3>
 <p>Python将带有小数点的数字都称为浮点数</p>
-<pre><code>&gt;&gt;&gt;0.1 + 0.1
+<pre><code class="language-python">&gt;&gt;&gt;0.1 + 0.1
 0.2
 &gt;&gt;&gt;0.2 + 0.2
 0.4
@@ -1023,20 +1051,20 @@ Hello Python 2.7 world!
 </code></pre>
 <p>事实上结果包含的小数位数是不确定的**</p>
 <h3 id="str">使用函数str()避免类型错误</h3>
-<pre><code class="language-python3">&gt;&gt;&gt;age = 23
+<pre><code class="language-python">&gt;&gt;&gt;age = 23
 &gt;&gt;&gt;message = &quot;Happy &quot; + age + &quot;rd Birthday!&quot;
 &gt;&gt;&gt;print(message)
 Traceback (most recent call last): File &quot;birthday.py&quot;, line 2, in &lt;module&gt; message = &quot;Happy &quot; + age + &quot;rd Birthday!&quot;  TypeError: Can't convert 'int' object to str implicitly
 </code></pre>
 <p>这是一个类型错误，因为python解释器不知道age是按照int输出还是按照字符串输出，解决方案如下</p>
-<pre><code class="language-python3">&gt;&gt;&gt;age = 23
+<pre><code class="language-python">&gt;&gt;&gt;age = 23
 &gt;&gt;&gt;message = &quot;Happy &quot; + str(age) + &quot;rd Birthday!&quot;# 将age转成字符串格式
 &gt;&gt;&gt;print(message)
 Happy 23rd Birthday!
 </code></pre>
 <h3 id="python2">Python2中的整数</h3>
 <p>在Python2中，整数除法就只包含整数部分，小数部分则会被删除，如果要避免这种情况，务必确保至少有一个操作数为浮点数</p>
-<pre><code class="language-python2.7.18">&gt;&gt;&gt;3/2
+<pre><code class="language-python">&gt;&gt;&gt;3/2
 1
 &gt;&gt;&gt;3/2.0
 1.5
@@ -1050,7 +1078,7 @@ Happy 23rd Birthday!
 <h2 id="_16">注释</h2>
 <h3 id="_17">如何编写注释</h3>
 <p>在Python中注释用‘#’标识，‘#’后的内容都会被Python解释器忽略</p>
-<pre><code class="language-python3"># 向大家问好
+<pre><code class="language-python"># 向大家问好
 &gt;&gt;&gt;print(&quot;Hello people&quot;)
 Hello people
 </code></pre>

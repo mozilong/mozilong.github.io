@@ -299,10 +299,10 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    列表时什么
+    列表是什么
   </a>
   
-    <nav class="md-nav" aria-label="列表时什么">
+    <nav class="md-nav" aria-label="列表是什么">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -508,6 +508,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        操作列表
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -569,6 +583,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        操作列表
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -608,10 +636,10 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    列表时什么
+    列表是什么
   </a>
   
-    <nav class="md-nav" aria-label="列表时什么">
+    <nav class="md-nav" aria-label="列表是什么">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -825,17 +853,17 @@
 
   <h1>列表简介</h1>
 
-<h2 id="_1">列表时什么</h2>
+<h2 id="_1">列表是什么</h2>
 <p><em>列表是有一系列按特定顺序摆列的元素组成。你可以创建包含字母表中所有字母、数字0~9或所有家庭成员姓名的列表；也可以将任何东西加入列表中，其中的元素之间可以没有任何关系。鉴于列表通常包含多个元素，给列表指定一个表示复数的名称（如letters、digits或names）是个不错的主意。</em>
 <strong>在python中用[]来表示列表，用逗号分割其中的元素</strong></p>
-<pre><code class="language-python3">&gt;&gt;&gt;bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+<pre><code class="language-python">&gt;&gt;&gt;bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 &gt;&gt;&gt;print(bicycles)
 ['trek', 'cannondale', 'redline', 'specialized']    
 </code></pre>
 <h3 id="_2">访问列表元素</h3>
 <p><em>列表是有序集合，因此要访问列表的任何元素，只需要将该元素的位置或索引告诉Python就可以</em>
 要访问列表元素，可指出列表的名称，在指出元素索引，并放在方括号内</p>
-<pre><code class="language-python3">&gt;&gt;&gt;bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+<pre><code class="language-python">&gt;&gt;&gt;bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 &gt;&gt;&gt;print(bicycles[0])
 trek
 # 类似于C中的数组，下标都是从0开始
@@ -843,13 +871,13 @@ trek
 <h3 id="01">索引从0开始而不是1开始</h3>
 <p>在Python中，列表的第一个元素索引为0，要访问列表的任何元素，都可以将其位置减一
 <strong>Python为访问最后一个列表元素提供了一种特殊语法，可以通过将索引定为-1，可让Python返回最后一个列表元素</strong></p>
-<pre><code>&gt;&gt;&gt;bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+<pre><code class="language-python">&gt;&gt;&gt;bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 &gt;&gt;&gt;print(bicycles[-1])
 specialized
 </code></pre>
 <h3 id="_3">使用列表中的各个值</h3>
 <p>可像使用其他变量一样使用列表中的各个值</p>
-<pre><code class="language-python3">&gt;&gt;&gt;bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+<pre><code class="language-python">&gt;&gt;&gt;bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 &gt;&gt;&gt;message = &quot;My first bicycle was a &quot; + bicycles[0].title() + &quot;.&quot;
 &gt;&gt;&gt;print(message)
 My first bicycle was a Trek.
@@ -865,7 +893,7 @@ My first bicycle was a Trek.
 <p><em>你创建的大多数的列表都是动态的，这意味着列表创建后，将会随着程序的运行而增删元素</em></p>
 <h3 id="_6">修改列表元素</h3>
 <p>修改列表元素的语法与访问列表元素的语法类似。要修改列表元素，可指定表名和要修改的元素的索引</p>
-<pre><code class="language-pyhton3">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
+<pre><code class="language-pyhton">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;print(motorcycles)
 ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;motorcycles[0] = 'ducati'
@@ -875,7 +903,7 @@ My first bicycle was a Trek.
 <h3 id="_7">在列表中添加元素</h3>
 <h4 id="_8">在列表末尾添加元素</h4>
 <p><strong>用append()方法来在列表末尾添加元素</strong></p>
-<pre><code class="language-python3">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
+<pre><code class="language-python">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;print(motorcycles)
 ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;motorcycles.append('ducati')
@@ -884,7 +912,7 @@ My first bicycle was a Trek.
 </code></pre>
 <h4 id="_9">在列表中插入元素</h4>
 <p><strong>使用insert()方法可以在列表的任何位置插入新元素,所以需要指定新元素的索引和值</strong></p>
-<pre><code class="language-python3">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
+<pre><code class="language-python">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;motorcycles.insert(0, 'ducati')
 &gt;&gt;&gt;print(motorcycles)
 ['ducati', 'honda', 'yamaha', 'suzuki']
@@ -892,7 +920,7 @@ My first bicycle was a Trek.
 <h3 id="_10">从列表中删除元素</h3>
 <h4 id="del">del语句删除元素</h4>
 <p><strong>如果知道要删除的元素在列表中的位置，可以用del语句</strong></p>
-<pre><code class="language-python3">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
+<pre><code class="language-python">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;print(motorcycles)
 ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;del motorcycles[0]
@@ -902,7 +930,7 @@ My first bicycle was a Trek.
 <h4 id="pop">pop()方法删除元素</h4>
 <p><strong>pop()方法可以删除列表末尾的元素，但是可以继续使用它的值</strong>
 <em>术语弹出（pop）源自这样的类比：列表就像一个栈，而删除列表末尾的元素相当于弹出栈顶元素。下面从列表motorcycles中弹出一款摩托车：</em></p>
-<pre><code class="language-python3">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
+<pre><code class="language-python">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;print(motorcycles)
 ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;popped_motorcycle = motorcycles.pop()
@@ -914,13 +942,13 @@ suzuki
 </code></pre>
 <h4 id="_11">弹出列表中的任意位置处的元素</h4>
 <p><strong>事实上pop()方法可以在括号中指定要删除的索引值来进行删除操作</strong></p>
-<pre><code>&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
+<pre><code class="language-python">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki']
 &gt;&gt;&gt;first_owned = motorcycles.pop(0)
 &gt;&gt;&gt;print(first_owned.title()
 Honda
 </code></pre>
 <h4 id="remove">remove()方法根据值删除元素</h4>
-<pre><code class="language-python3">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+<pre><code class="language-python">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
 &gt;&gt;&gt;print(motorcycles)
 'honda', 'yamaha', 'suzuki', 'ducati']
 &gt;&gt;&gt;motorcycles.remove('ducati')
@@ -928,7 +956,7 @@ Honda
 ['honda', 'yamaha', 'suzuki']
 </code></pre>
 <p><strong>在使用remove()方法时，是可以继续使用它的值的</strong></p>
-<pre><code class="language-python3">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+<pre><code class="language-python">&gt;&gt;&gt;motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
 &gt;&gt;&gt;print(motorcycles)
 ['honda', 'yamaha', 'suzuki', 'ducati']
 &gt;&gt;&gt;too_expensive = 'ducati'
@@ -963,7 +991,7 @@ A Ducati is too expensive for me.
 <h2 id="_13">组织列表</h2>
 <p><em>你创建的列表很多都是无序的</em></p>
 <h3 id="sort">使用sort()方法对列表进行永久排序</h3>
-<pre><code class="language-python3">&gt;&gt;&gt;cars = ['bmw', 'audi', 'toyota', 'subaru']
+<pre><code class="language-python">&gt;&gt;&gt;cars = ['bmw', 'audi', 'toyota', 'subaru']
 &gt;&gt;&gt;cars.sort()
 &gt;&gt;&gt;print(cars)
 ['audi', 'bmw', 'subaru', 'toyota']
@@ -975,7 +1003,7 @@ A Ducati is too expensive for me.
 </code></pre>
 <h3 id="sorted">使用sorted()对列表进行临时排序</h3>
 <p><em>要保留列表元素原来的顺序，同时以特定的顺序呈现它们，可使用函数sorted()</em></p>
-<pre><code class="language-python3">&gt;&gt;&gt;cars = ['bmw', 'audi', 'toyota', 'subaru']
+<pre><code class="language-python">&gt;&gt;&gt;cars = ['bmw', 'audi', 'toyota', 'subaru']
 &gt;&gt;&gt;print(&quot;Here is the original list:&quot;)
 Here is the original list:
 &gt;&gt;&gt;print(cars)
@@ -991,7 +1019,7 @@ Here is the original list again:
 </code></pre>
 <h3 id="_14">倒着打印列表</h3>
 <p><strong>要反转列表元素的排列顺序，可使用reverse()</strong></p>
-<pre><code class="language-pyhton3">&gt;&gt;&gt;cars = ['bmw', 'audi', 'toyota', 'subaru']
+<pre><code class="language-pyhton">&gt;&gt;&gt;cars = ['bmw', 'audi', 'toyota', 'subaru']
 &gt;&gt;&gt;print(cars)
 ['bmw', 'audi', 'toyota', 'subaru']
 &gt;&gt;&gt;cars.reverse()
@@ -1001,7 +1029,7 @@ Here is the original list again:
 </code></pre>
 <h3 id="_15">确定列表的长度</h3>
 <p><em>函数len()可以快速获悉列表的长度</em></p>
-<pre><code class="language-python3">&gt;&gt;&gt;cars = ['bmw', 'audi', 'toyota', 'subaru']
+<pre><code class="language-python">&gt;&gt;&gt;cars = ['bmw', 'audi', 'toyota', 'subaru']
 &gt;&gt;&gt;len(cars)
 4
 </code></pre>
@@ -1058,13 +1086,13 @@ Here is the original list again:
       
       
         
-        <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E5%8F%98%E9%87%8F%E4%B8%8E%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-footer__link md-footer__link--next" aria-label="Next: 变量与简单数据模型" rel="next">
+        <a href="../%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-footer__link md-footer__link--next" aria-label="Next: 操作列表" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              变量与简单数据模型
+              操作列表
             </div>
           </div>
           <div class="md-footer__button md-icon">
