@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "8074b2617db67f6e",
+        "id": "fa603671264d98b9",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Python编程从入门到实践/动手试一试/类.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Python编程从入门到实践/动手试一试/类.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Python编程从入门到实践/动手试一试/类.md"
+              }
             }
           }
         ]
@@ -109,9 +116,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8074b2617db67f6e",
+  "active": "fa603671264d98b9",
   "lastOpenFiles": [
     "Python编程从入门到实践/基础知识/类.md",
+    "Python编程从入门到实践/动手试一试/类.md",
     "Python编程从入门到实践/基础知识/if语句.md",
     "Python编程从入门到实践/基础知识/列表简介.md",
     "Python编程从入门到实践/基础知识/函数.md",
@@ -119,7 +127,6 @@
     "Python编程从入门到实践/基础知识/操作列表.md",
     "Python编程从入门到实践/基础知识/变量和简单的数据类型.md",
     "Python编程从入门到实践/动手试一试/if语句.md",
-    "Python编程从入门到实践/基础知识/文件与异常.md",
-    "Python编程从入门到实践/动手试一试/文件与异常.md"
+    "Python编程从入门到实践/基础知识/文件与异常.md"
   ]
 }
