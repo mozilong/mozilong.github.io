@@ -1,0 +1,1106 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mozilong.github.io/%E7%AC%94%E8%AE%B0/Python%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E7%B1%BB/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>类 - mozilong.github.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="mozilong.github.io" class="md-header__button md-logo" aria-label="mozilong.github.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mozilong.github.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              类
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="mozilong.github.io" class="md-nav__button md-logo" aria-label="mozilong.github.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    mozilong.github.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Python读书笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python读书笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python读书笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          基础知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="基础知识" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          基础知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        变量与简单数据类型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        列表简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        操作列表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/if%E8%AF%AD%E5%8F%A5/" class="md-nav__link">
+        if语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%B1%BB/" class="md-nav__link">
+        类
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E6%96%87%E4%BB%B6%E4%B8%8E%E5%BC%82%E5%B8%B8/" class="md-nav__link">
+        文件与异常
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          动手试一试
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="动手试一试" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          动手试一试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8F%98%E9%87%8F%E4%B8%8E%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        变量与简单数据模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        列表简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        操作列表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../if%E8%AF%AD%E5%8F%A5/" class="md-nav__link">
+        if语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%96%87%E4%BB%B6%E4%B8%8E%E5%BC%82%E5%B8%B8/" class="md-nav__link">
+        文件与异常
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          类
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        类
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#9-1" class="md-nav__link">
+    9-1 餐馆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    三家餐馆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-3" class="md-nav__link">
+    9-3 用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    就餐人数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-5" class="md-nav__link">
+    9-5 尝试登录次数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-6" class="md-nav__link">
+    9-6 冰淇淋小店
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-7" class="md-nav__link">
+    9-7 管理员
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-8" class="md-nav__link">
+    9-8 权限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-9" class="md-nav__link">
+    9-9 电瓶升级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-10-restaurant" class="md-nav__link">
+    9-10 导入Restaurant类
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#9-1" class="md-nav__link">
+    9-1 餐馆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    三家餐馆
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-3" class="md-nav__link">
+    9-3 用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    就餐人数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-5" class="md-nav__link">
+    9-5 尝试登录次数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-6" class="md-nav__link">
+    9-6 冰淇淋小店
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-7" class="md-nav__link">
+    9-7 管理员
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-8" class="md-nav__link">
+    9-8 权限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-9" class="md-nav__link">
+    9-9 电瓶升级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-10-restaurant" class="md-nav__link">
+    9-10 导入Restaurant类
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>类</h1>
+
+<h2 id="9-1">9-1 餐馆</h2>
+<pre><code class="language-pyhton">class Restaurant(): 
+    &quot;&quot;&quot;一个表示餐馆的类。&quot;&quot;&quot;
+    def __init__(self, name, cuisine_type): 
+        &quot;&quot;&quot;初始化餐馆。&quot;&quot;&quot; 
+        self.name = name.title()
+        self.cuisine_type = cuisine_type
+    def describe_restaurant(self):
+        &quot;&quot;&quot;显示餐馆信息摘要。&quot;&quot;&quot; 
+        msg = f&quot;{self.name} serves wonderful {self.cuisine_type}.&quot;
+        print(f&quot;\n{msg}&quot;)
+    def open_restaurant(self):
+        &quot;&quot;&quot;显示一条消息，指出餐馆正在营业。&quot;&quot;&quot;
+        msg = f&quot;{self.name} is open.Come on in!&quot;
+        print(f&quot;\n{msg}&quot;)
+restaurant = Restaurant('the mean queen', 'pizza') 
+print(restaurant.name)
+print(restaurant.cuisine_type)
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+</code></pre>
+<h2 id="_1">三家餐馆</h2>
+<pre><code class="language-python">class Restaurant():
+    &quot;&quot;&quot;一个表示餐馆的类。&quot;&quot;&quot;
+    def __init__(self, name, cuisine_type):
+        &quot;&quot;&quot;初始化餐馆。&quot;&quot;&quot;
+        self.name = name.title()
+        self.cuisine_type = cuisine_type
+    def describe_restaurant(self):
+        &quot;&quot;&quot;显示餐馆信息摘要概述。&quot;&quot;&quot;
+        msg = f&quot;{self.name} serves wonderful {self.cuisine_type}.&quot;
+        print(f&quot;\n{msg}&quot;)
+    def open_restaurant(self):
+        &quot;&quot;&quot;显示一条消息，指出餐馆正在营业。&quot;&quot;&quot;
+        msg = f&quot;{self.name} is open. Come on in!&quot; print(f&quot;\n{msg}&quot;)
+        mean_queen = Restaurant('the mean queen', 'pizza')
+        mean_queen.describe_restaurant()
+ludvigs = Restaurant(&quot;ludvig's bistro&quot;, 'seafood')
+ludvigs.describe_restaurant()
+mango_thai = Restaurant('mango thai', 'thai food')
+mango_thai.describe_restaurant()
+</code></pre>
+<h2 id="9-3">9-3 用户</h2>
+<pre><code class="language-python">class User():
+    &quot;&quot;&quot;一个表示用户的简单类。&quot;&quot;&quot;
+    def __init__(self, first_name, last_name, username, email, location):
+        &quot;&quot;&quot;初始化用户。&quot;&quot;&quot;
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+    def describe_user(self):
+        &quot;&quot;&quot;显示用户信息摘要。&quot;&quot;&quot;
+        print(f&quot;\n{self.first_name} {self.last_name}&quot;)
+        print(f&quot; Username: {self.username}&quot;)
+        print(f&quot; Email: {self.email}&quot;)
+        print(f&quot; Location: {self.location}&quot;)
+    def greet_user(self):
+        &quot;&quot;&quot;向用户发出个性化的问候。&quot;&quot;&quot;
+        print(f&quot;\nWelcome back, {self.username}!&quot;)
+eric = User('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska') 
+eric.describe_user() 
+eric.greet_user()
+willie = User('willie', 'burger', 'willieburger', 'wb@example.com', 'alaska') 
+willie.describe_user()
+willie.greet_user()
+</code></pre>
+<h2 id="_2">就餐人数</h2>
+<pre><code class="language-python">class Restaurant():
+    &quot;&quot;&quot;一个表示餐馆的类。&quot;&quot;&quot;
+    def __init__(self, name, cuisine_type):
+        &quot;&quot;&quot;初始化餐馆。&quot;&quot;&quot;
+        self.name = name.title()
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
+    def describe_restaurant(self):
+        &quot;&quot;&quot;显示餐馆信息摘要。&quot;&quot;&quot;
+        msg = f&quot;{self.name} serves wonderful {self.cuisine_type}.&quot;
+        print(f&quot;\n{msg}&quot;)
+    def open_restaurant(self):
+        &quot;&quot;&quot;显示一条消息，指出餐馆正在营业。&quot;&quot;&quot;
+        msg = f&quot;{self.name} is open. Come on in!&quot; print(f&quot;\n{msg}&quot;)
+    def set_number_served(self, number_served):
+        &quot;&quot;&quot;让用户能够设置就餐人数。&quot;&quot;&quot;
+        self.number_served = number_served
+    def increment_number_served(self, additional_served):
+        &quot;&quot;&quot;让用户能够增加就餐人数。&quot;&quot;&quot;
+        self.number_served += additional_served 
+restaurant = Restaurant('the mean queen', 'pizza')
+restaurant.describe_restaurant()
+print(f&quot;\nNumber served: {restaurant.number_served}&quot;)
+restaurant.number_served = 430
+print(f&quot;Number served: {restaurant.number_served}&quot;)
+restaurant.set_number_served(1257)
+print(f&quot;Number served: {restaurant.number_served}&quot;) 
+restaurant.increment_number_served(239) 
+print(f&quot;Number served: {restaurant.number_served}&quot;)
+</code></pre>
+<h2 id="9-5">9-5 尝试登录次数</h2>
+<pre><code class="language-python">class User():
+    &quot;&quot;&quot;一个表示用户的简单类。&quot;&quot;&quot;
+    def __init__(self, first_name, last_name, username, email, location):
+        &quot;&quot;&quot;初始化用户.&quot;&quot;&quot;
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+        self.login_attempts = 0
+    def describe_user(self):
+        &quot;&quot;&quot;显示用户信息摘要。&quot;&quot;&quot;
+        print(f&quot;\n{self.first_name} {self.last_name}&quot;)
+        print(f&quot; Username: {self.username}&quot;)
+        print(f&quot; Email: {self.email}&quot;)
+        print(f&quot; Location: {self.location}&quot;) 
+    def greet_user(self): 
+        &quot;&quot;&quot;向用户发出个性化问候。&quot;&quot;&quot;
+        print(f&quot;\nWelcome back, {self.username}!&quot;)
+    def increment_login_attempts(self):
+        &quot;&quot;&quot;将属性 login_attempts 的值加 1。&quot;&quot;&quot;
+        self.login_attempts += 1
+    def reset_login_attempts(self): 
+        &quot;&quot;&quot;将 login_attempts 重置为 0。&quot;&quot;&quot;
+        self.login_attempts = 0
+eric = User('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska') 
+eric.describe_user() eric.greet_user() 
+print(&quot;\nMaking 3 login attempts...&quot;) 
+eric.increment_login_attempts() 
+eric.increment_login_attempts() 
+eric.increment_login_attempts() 
+print(f&quot; Login attempts: {eric.login_attempts}&quot;)
+print(&quot;Resetting login attempts...&quot;) 
+eric.reset_login_attempts() 
+print(f&quot; Login attempts: {eric.login_attempts}&quot;)
+</code></pre>
+<h2 id="9-6">9-6 冰淇淋小店</h2>
+<pre><code class="language-python">class Restaurant(): 
+    &quot;&quot;&quot;一个表示餐馆的类。&quot;&quot;&quot;
+    def __init__(self, name, cuisine_type):
+        &quot;&quot;&quot;初始化餐馆。&quot;&quot;&quot;
+        self.name = name.title()
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
+    def describe_restaurant(self):
+        &quot;&quot;&quot;显示餐馆信息摘要。&quot;&quot;&quot;
+        msg = f&quot;{self.name} serves wonderful {self.cuisine_type}.&quot;
+        print(f&quot;\n{msg}&quot;)
+    def open_restaurant(self):
+        &quot;&quot;&quot;显示一条消息，指出餐馆正在营业。&quot;&quot;&quot;
+        msg = f&quot;{self.name} is open. Come on in!&quot;
+        print(f&quot;\n{msg}&quot;)
+    def set_number_served(self, number_served):
+        &quot;&quot;&quot;让用户能够设置就餐人数。&quot;&quot;&quot;
+        self.number_served = number_served
+    def increment_number_served(self, additional_served): 
+        &quot;&quot;&quot;让用户能够增加就餐人数。&quot;&quot;&quot;
+        self.number_served += additional_served
+class IceCreamStand(Restaurant):
+    &quot;&quot;&quot;一个表示冰激凌小店的类。&quot;&quot;&quot;
+    def __init__(self, name, cuisine_type='ice_cream'):
+        &quot;&quot;&quot;初始化冰激凌小店。&quot;&quot;&quot;
+        super().__init__(name, cuisine_type)
+        self.flavors = [] 
+    def show_flavors(self): &quot;&quot;
+        &quot;显示出售的冰激凌品种。&quot;&quot;&quot;
+        print(&quot;\nWe have the following flavors available:&quot;)
+        for flavor in self.flavors:
+            print(f&quot;- {flavor.title()}&quot;)
+big_one = IceCreamStand('The Big One')
+big_one.flavors = ['vanilla', 'chocolate', 'black cherry']
+big_one.describe_restaurant()
+big_one.show_flavors()
+</code></pre>
+<h2 id="9-7">9-7 管理员</h2>
+<pre><code class="language-python">class User():
+    &quot;&quot;&quot;一个表示用户的简单类。&quot;&quot;&quot;
+    def __init__(self, first_name, last_name, username, email, location):
+        &quot;&quot;&quot;初始化用户。&quot;&quot;&quot; 
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+        self.login_attempts = 0
+    def describe_user(self): 
+        &quot;&quot;&quot;显示用户信息摘要。&quot;&quot;&quot; 
+        print(f&quot;\n{self.first_name} {self.last_name}&quot;)
+        print(f&quot; Username: {self.username}&quot;)
+        print(f&quot; Email: {self.email}&quot;)
+        print(f&quot; Location: {self.location}&quot;)
+    def greet_user(self):
+        &quot;&quot;&quot;向用户发出个性化问候。&quot;&quot;&quot;
+        print(f&quot;\nWelcome back, {self.username}!&quot;)
+    def increment_login_attempts(self): 
+        &quot;&quot;&quot;将属性 login_attempts 的值加 1。&quot;&quot;&quot; 
+        self.login_attempts += 1 
+    def reset_login_attempts(self): 
+        &quot;&quot;&quot;将 login_attempts 重置为 0。&quot;&quot;&quot; 
+        self.login_attempts = 0 
+class Admin(User): 
+    &quot;&quot;&quot;有管理权限的用户。&quot;&quot;&quot;
+    def __init__(self, first_name, last_name, username, email, location):
+        &quot;&quot;&quot;初始化管理员。&quot;&quot;&quot;
+        super().__init__(first_name, last_name, username, email, location) 
+        self.privileges = [] 
+    def show_privileges(self):
+        &quot;&quot;&quot;显示当前管理员的权限。&quot;&quot;&quot;
+        print(&quot;\nPrivileges:&quot;) 
+        for privilege in self.privileges: 
+            print(f&quot;- {privilege}&quot;) 
+eric = Admin('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska') 
+eric.describe_user()
+eric.privileges = [ 'can reset passwords', 'can moderate discussions', 'can suspend accounts', ] 
+eric.show_privileges()
+</code></pre>
+<h2 id="9-8">9-8 权限</h2>
+<pre><code class="language-python">class User():
+    &quot;&quot;&quot;一个表示用户的简单类。&quot;&quot;&quot;
+    def __init__(self, first_name, last_name, username, email, location):
+        &quot;&quot;&quot;初始化用户。&quot;&quot;&quot; 
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+        self.login_attempts = 0 
+    def describe_user(self):
+        &quot;&quot;&quot;显示用户信息摘要。&quot;&quot;&quot; 
+        print(f&quot;\n{self.first_name} {self.last_name}&quot;)
+        print(f&quot; Username: {self.username}&quot;) 
+        print(f&quot; Email: {self.email}&quot;) 
+        print(f&quot; Location: {self.location}&quot;) 
+    def greet_user(self): 
+        &quot;&quot;&quot;向用户发出个性化问候。&quot;&quot;&quot; 
+        print(f&quot;\nWelcome back, {self.username}!&quot;)
+    def increment_login_attempts(self):
+        &quot;&quot;&quot;将属性 login_attempts 的值加 1。&quot;&quot;&quot;
+        self.login_attempts += 1
+    def reset_login_attempts(self): 
+        &quot;&quot;&quot;将 login_attempts 重置为 0。&quot;&quot;&quot;
+        self.login_attempts = 0 
+class Admin(User): 
+    &quot;&quot;&quot;有管理权限的用户。&quot;&quot;&quot;
+    def __init__(self, first_name, last_name, username, email, location):
+        &quot;&quot;&quot;初始化管理员。&quot;&quot;&quot;
+        super().__init__(first_name, last_name, username, email, location) 
+        # 将权限集初始化为空。
+        self.privileges = Privileges()
+class Privileges():
+    &quot;&quot;&quot;一个存储管理员权限的类。&quot;&quot;&quot; 
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
+    def show_privileges(self):
+        print(&quot;\nPrivileges:&quot;)
+        if self.privileges:
+            for privilege in self.privileges:
+                print(f&quot;- {privilege}&quot;)
+            else:
+                print(&quot;- This user has no privileges.&quot;)
+eric = Admin('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska') 
+eric.describe_user() 
+eric.privileges.show_privileges() 
+print(&quot;\nAdding privileges...&quot;)
+eric_privileges = [ 'can reset passwords', 'can moderate discussions''can suspend accounts', ]
+eric.privileges.privileges = eric_privileges 
+eric.privileges.show_privileges()
+</code></pre>
+<h2 id="9-9">9-9 电瓶升级</h2>
+<pre><code class="language-python">class Car():
+    &quot;&quot;&quot;一次模拟汽车的简单尝试。&quot;&quot;&quot;
+    def __init__(self, manufacturer, model, year):
+        &quot;&quot;&quot;初始化描述汽车的属性。&quot;&quot;&quot;
+        self.manufacturer = manufacturer
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+    def get_descriptive_name(self):
+        &quot;&quot;&quot;返回整洁的描述性信息。&quot;&quot;&quot;
+        long_name = f&quot;{self.year} {self.manufacturer} {self.model}&quot;
+        return long_name.title()
+    def read_odometer(self):
+        &quot;&quot;&quot;打印一条指出汽车里程的消息。&quot;&quot;&quot; 
+        print(f&quot;This car has {self.odometer_reading} miles on it.&quot;)
+    def update_odometer(self, mileage):
+        &quot;&quot;&quot; 将里程表读数设置为指定的值。 禁止将里程表读数往回调。 &quot;&quot;&quot;
+        if mileage &gt;= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print(&quot;You can't roll back an odometer!&quot;)
+    def increment_odometer(self, miles):
+            &quot;&quot;&quot;将里程表读数增加指定的量。&quot;&quot;&quot;
+            self.odometer_reading += miles
+class Battery():
+    &quot;&quot;&quot;一次模拟电动汽车电瓶的简单尝试。&quot;&quot;&quot;
+        def __init__(self, battery_size=75):
+            &quot;&quot;&quot;初始化电瓶的属性。&quot;&quot;&quot;
+            self.battery_size = battery_size
+        def describe_battery(self): 
+            &quot;&quot;&quot;打印一条描述电瓶容量的消息。&quot;&quot;&quot;
+            print(f&quot;This car has a {self.battery_size}-kWh battery.&quot;)
+        def get_range(self):
+            &quot;&quot;&quot;打印一条消息，指出电瓶的续航里程。&quot;&quot;&quot;
+            if self.battery_size == 75:
+                range = 260
+            elif self.battery_size == 100:
+                range = 315
+            message = f&quot;This car can go approximately {range}&quot;
+            message += &quot; miles on a full charge.&quot;
+            print(message)
+        def upgrade_battery(self):
+            &quot;&quot;&quot;在可能的情况下将电瓶升级。&quot;&quot;&quot;
+            if self.battery_size == 75:
+                self.battery_size = 100
+                print(&quot;Upgraded the battery to 100 kWh.&quot;)
+            else:
+                print(&quot;The battery is already upgraded.&quot;)
+class ElectricCar(Car):
+    &quot;&quot;&quot;电动汽车的独特之处。&quot;&quot;&quot; 
+    def __init__(self, manufacturer, model, year):
+        &quot;&quot;&quot; 初始化父类的属性。 再初始化电动汽车特有的属性。 &quot;&quot;&quot;
+        super().__init__(manufacturer, model, year)
+        self.battery = Battery()
+print(&quot;Make an electric car, and check the battery:&quot;)
+my_tesla = ElectricCar('tesla', 'roadster', 2019)
+my_tesla.battery.describe_battery()
+print(&quot;\nUpgrade the battery, and check it again:&quot;)
+my_tesla.battery.upgrade_battery()
+my_tesla.battery.describe_battery()
+print(&quot;\nTry upgrading the battery a second time.&quot;)
+my_tesla.battery.upgrade_battery()
+my_tesla.battery.describe_battery()
+</code></pre>
+<h2 id="9-10-restaurant">9-10 导入Restaurant类</h2>
+<p><em>restaurant.py:</em></p>
+<pre><code class="language-python">&quot;&quot;&quot;一个表示餐馆的类。&quot;&quot;&quot;
+class Restaurant(): 
+    &quot;&quot;&quot;一个表示餐馆的类。&quot;&quot;&quot; 
+    def __init__(self, name, cuisine_type): 
+        &quot;&quot;&quot;初始化餐馆。&quot;&quot;&quot; 
+        self.name = name.title() 
+        self.cuisine_type = cuisine_type 
+        self.number_served = 0
+    def describe_restaurant(self):
+        &quot;&quot;&quot;显示餐馆信息摘要。&quot;&quot;&quot;
+        msg = f&quot;{self.name}serves wonderful {self.cuisine_type}.&quot;
+        print(f&quot;\n{msg}&quot;)
+    def open_restaurant(self):
+        &quot;&quot;&quot;显示一条消息，指出餐馆正在营业。&quot;&quot;&quot;
+        msg = f&quot;{self.name} is open. Come on in!&quot;
+        print(f&quot;\n{msg}&quot;)
+    def set_number_served(self, number_served):
+        &quot;&quot;&quot;让用户能够设置就餐人数。&quot;&quot;&quot; 
+        self.number_served = number_served
+    def increment_number_served(self, additional_served):
+        &quot;&quot;&quot;让用户能够增加就餐人数。&quot;&quot;&quot; 
+        self.number_served += additional_served
+</code></pre>
+<p><em>my_restaurant.py</em></p>
+<pre><code class="language-python">from restaurant import Restaurant
+channel_club = Restaurant('the channel club', 'steak and seafood')
+channel_club.describe_restaurant() 
+channel_club.open_restaurant()
+</code></pre>
+<p><strong><em>剩下的题参考上方答案</em></strong></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../%E6%96%87%E4%BB%B6%E4%B8%8E%E5%BC%82%E5%B8%B8/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 文件与异常" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              文件与异常
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+    
+  </body>
+</html>
