@@ -74,7 +74,7 @@ game_active = True
 can_edit = False
 ```
 在跟踪程序状态或程序中重要的条件方面，布尔值提供了一种高效的方式
-#### 动手试一试
+##### 动手试一试
 ```
 5-1 条件测试：编写一系列条件测试；将每个测试以及你对其结果的预测和实际结果都打印出来。你编写的
 代码应类似于下面这样：
@@ -169,7 +169,7 @@ if 'extra cheese' in requested_toppings:
 	print("Adding extra cheese.") 
 print("\nFinished making your pizza!")
 ```
-#### 动手试一试
+##### 动手试一试
 ```
 5-3 外星人颜色#1：假设在游戏中刚射杀了一个外星人，请创建一个名为alien_color的变量，并将其设
 置为'green'、'yellow'或'red'。
@@ -241,7 +241,7 @@ for requested_topping in requested_toppings:
 		print("Sorry, we don't have " + requested_topping + ".")
 print("\nFinished making your pizza!")
 ```
-#### 动手试一试
+##### 动手试一试
 ```
 5-8 以特殊方式跟管理员打招呼：创建一个至少包含5个用户名的列表，且其中一个用户名为'admin'。想
 象你要编写代码，在每位用户登录网站后都打印一条问候消息。遍历用户名列表，并向每位用户打印一条问
