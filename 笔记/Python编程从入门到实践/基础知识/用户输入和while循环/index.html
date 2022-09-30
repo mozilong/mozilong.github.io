@@ -1,0 +1,1188 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mozilong.github.io/%E7%AC%94%E8%AE%B0/Python%E7%BC%96%E7%A8%8B%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%AE%9E%E8%B7%B5/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+    
+    
+      
+        <title>用户输入和while循环 - mozilong.github.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7a952b86.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#input" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="mozilong.github.io" class="md-header__button md-logo" aria-label="mozilong.github.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            mozilong.github.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              用户输入和while循环
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="mozilong.github.io" class="md-nav__button md-logo" aria-label="mozilong.github.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    mozilong.github.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Python读书笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python读书笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Python读书笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          基础知识
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="基础知识" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          基础知识
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        变量与简单数据类型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        列表简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        操作列表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../if%E8%AF%AD%E5%8F%A5/" class="md-nav__link">
+        if语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%AD%97%E5%85%B8/" class="md-nav__link">
+        字典
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          用户输入和while循环
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        用户输入和while循环
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    函数input()工作原理
+  </a>
+  
+    <nav class="md-nav" aria-label="函数input()工作原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    编写清晰的程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int" class="md-nav__link">
+    使用int()来获取数值输入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    求模运算符
+  </a>
+  
+    <nav class="md-nav" aria-label="求模运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    动手试一试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    while 循环简介
+  </a>
+  
+    <nav class="md-nav" aria-label="while 循环简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#while_1" class="md-nav__link">
+    使用while循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    让用户选择何时退出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    使用标志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    使用break退出循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue" class="md-nav__link">
+    在循环中使用continue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    避免无限循环
+  </a>
+  
+    <nav class="md-nav" aria-label="避免无限循环">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    动手试一试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while_2" class="md-nav__link">
+    使用while循环来处理列表和字典
+  </a>
+  
+    <nav class="md-nav" aria-label="使用while循环来处理列表和字典">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    在列表之间移动元素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    删除包含特定值的所有列表元素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    使用用户输入来填充字典
+  </a>
+  
+    <nav class="md-nav" aria-label="使用用户输入来填充字典">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    动手试一试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%B1%BB/" class="md-nav__link">
+        类
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%96%87%E4%BB%B6%E4%B8%8E%E5%BC%82%E5%B8%B8/" class="md-nav__link">
+        文件与异常
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          动手试一试
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="动手试一试" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          动手试一试
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E5%8F%98%E9%87%8F%E4%B8%8E%E7%AE%80%E5%8D%95%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+        变量与简单数据模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E5%88%97%E8%A1%A8%E7%AE%80%E4%BB%8B/" class="md-nav__link">
+        列表简介
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E6%93%8D%E4%BD%9C%E5%88%97%E8%A1%A8/" class="md-nav__link">
+        操作列表
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/if%E8%AF%AD%E5%8F%A5/" class="md-nav__link">
+        if语句
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E5%AD%97%E5%85%B8/" class="md-nav__link">
+        字典
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E5%92%8Cwhile%E5%BE%AA%E7%8E%AF/" class="md-nav__link">
+        用户输入和while循环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E7%B1%BB/" class="md-nav__link">
+        类
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8A%A8%E6%89%8B%E8%AF%95%E4%B8%80%E8%AF%95/%E6%96%87%E4%BB%B6%E4%B8%8E%E5%BC%82%E5%B8%B8/" class="md-nav__link">
+        文件与异常
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    函数input()工作原理
+  </a>
+  
+    <nav class="md-nav" aria-label="函数input()工作原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    编写清晰的程序
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int" class="md-nav__link">
+    使用int()来获取数值输入
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    求模运算符
+  </a>
+  
+    <nav class="md-nav" aria-label="求模运算符">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    动手试一试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while" class="md-nav__link">
+    while 循环简介
+  </a>
+  
+    <nav class="md-nav" aria-label="while 循环简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#while_1" class="md-nav__link">
+    使用while循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    让用户选择何时退出
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    使用标志
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    使用break退出循环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue" class="md-nav__link">
+    在循环中使用continue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    避免无限循环
+  </a>
+  
+    <nav class="md-nav" aria-label="避免无限循环">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    动手试一试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#while_2" class="md-nav__link">
+    使用while循环来处理列表和字典
+  </a>
+  
+    <nav class="md-nav" aria-label="使用while循环来处理列表和字典">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    在列表之间移动元素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    删除包含特定值的所有列表元素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    使用用户输入来填充字典
+  </a>
+  
+    <nav class="md-nav" aria-label="使用用户输入来填充字典">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    动手试一试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>用户输入和while循环</h1>
+
+<h2 id="input">函数input()工作原理</h2>
+<p>函数input()让程序暂停运行，等待用户输入一些文本。获取用户输入后，python将其存储在一个变量中，方便使用</p>
+<pre><code class="language-python">message = input(&quot;请输入一些东西，我将返回给你&quot;)
+print(message)
+</code></pre>
+<p>函数input()接受一个参数：即要向用户显示的提示或说明，让用户知道该如何做</p>
+<h3 id="_1">编写清晰的程序</h3>
+<p>每当你想使用函数input时，都应制定清晰而易于明白的提示，准确地指出你希望用户提供什么样的信息</p>
+<pre><code class="language-python">name = input(&quot;请输入你的名字&quot;)
+print(&quot;Hello,&quot; +name)
+</code></pre>
+<p>有时候，提示可能超过一行，例如，你可能需要指出获取特定输入的原因。在这种情况下，可将提示存储在一个变量中，再将该变量传递给函数input()。这样，即便提示超过一行，input()语句也非常清晰。</p>
+<pre><code class="language-python">prompt = &quot;If you tell us who you are, we can personalize the messages you see.&quot;
+prompt += &quot;\nWhat is your first name? &quot; 
+name = input(prompt) 
+print(&quot;\nHello, &quot; + name + &quot;!&quot;)
+</code></pre>
+<p>这个示例演示了一种创建多行字符串的方式。第1行将消息的前半部分存储在变量prompt中；在第2行中，运算符+=在存储在prompt中的字符串末尾附加一个字符串。</p>
+<h3 id="int">使用int()来获取数值输入</h3>
+<p>使用函数input()时，Python将用户输入解读为字符串。请看下面让用户输入其年龄的解释器会话：</p>
+<pre><code class="language-python">&gt;&gt;&gt; age = input(&quot;How old are you&quot;)
+How old are you 21
+&gt;&gt;&gt; age &gt;= 18
+Traceback (most recent call last): 
+File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; 
+TypeError: unorderable types: str() &gt;= int()
+</code></pre>
+<p>你试图将输入用于数值比较时,Python会引发错误，因为它无法将字符串和整数进行比较：不能将存储在age中的字符串'21'与数值18进行比较
+为解决这个问题，可使用函数int()，它让Python将输入视为数值。函数int()将数字的字符串表示转换为数值表示</p>
+<pre><code class="language-python">&gt;&gt;&gt; age = input(&quot;How old are you&quot;)
+How old are you 21
+&gt;&gt;&gt; age = int(age)
+&gt;&gt;&gt; age &gt;= 18
+True
+</code></pre>
+<h3 id="_2">求模运算符</h3>
+<p>处理信息时，求模运算符<code>%</code>是一个很有用的工具，它能将两个数相除并返回余数
+求模运算符不会指出一个数是另一个数的多少倍，而只指出余数是多少。
+如果一个数可被另一个数整除，余数就为0，因此求模运算符将返回0。你可利用这一点来判断一个数是奇数还是偶数</p>
+<pre><code class="language-python">umber = input(&quot;Enter a number, and I'll tell you if it's even or odd: &quot;) 
+number = int(number) 
+if number % 2 == 0: 
+    print(&quot;\nThe number &quot; + str(number) + &quot; is even.&quot;) 
+else: 
+    print(&quot;\nThe number &quot; + str(number) + &quot; is odd.&quot;)
+</code></pre>
+<p>偶数都能被2整除，因此对一个数（number）和2执行求模运算的结果为零，即number % 2 == 0，那么这个数就是偶数；否则就是奇数。</p>
+<h5 id="_3">动手试一试</h5>
+<pre><code>7-1 汽车租赁：编写一个程序，询问用户要租赁什么样的汽车，并打印一条消息，如“Let me see if I can find you a 
+Subaru”。
+7-2 餐馆订位：编写一个程序，询问用户有多少人用餐。如果超过8人，就打印一条消息，指出没有空桌；否则指出有空桌。
+7-3 10的整数倍：让用户输入一个数字，并指出这个数字是否是10的整数倍
+</code></pre>
+<h2 id="while">while 循环简介</h2>
+<p>for循环用于针对集合中的每个元素都一个代码块，而while循环不断地运行，直到指定的条件不满足为止。</p>
+<h3 id="while_1">使用while循环</h3>
+<p>你可以使用while循环来数数，例如，下面的while循环从1数到5</p>
+<pre><code class="language-python">current_number = 1 
+while current_number &lt;= 5: 
+    print(current_number) 
+    current_number += 1
+</code></pre>
+<p>在第1行，我们将current_number设置为1，从而指定从1开始数。接下来的while循环被设置成这样：只要current_number小于或等于5，就接着运行这个循环。循环中的代码打印current_number的值，再使用代码current_number += 1（代码current_number = current_number + 1的简写）将其值加1。只要满足条件current_number &lt;= 5，Python就接着运行这个循环。由于1小于5，因此Python打印1，并将current_number加1，使其为2；由于2小于5，因此Python打印2，并将current_number加1，使其为3，以此类推。一旦current_number大于5，循环将停止，整个程序也将到此结束</p>
+<h3 id="_4">让用户选择何时退出</h3>
+<p>使用while循环让程序在用户愿意时不断地运行，如下面的程序parrot.py所示。我们在其中定义了一个退出值，只要用户输入的不是这个值，程序就接着运行</p>
+<pre><code class="language-python">rompt = &quot;\nTell me something, and I will repeat it back to you:&quot; #我们定义了一条提示消息，告诉用户他有两个选择：要么输入一条消息，要么输入退出值（这里为'quit'）
+prompt += &quot;\nEnter 'quit' to end the program. &quot;
+message = &quot;&quot; #用于存储用户输入的值
+while message != 'quit': #只要message的值不是'quit'，这个循环就会不断运行
+    message = input(prompt)
+    print(message)
+</code></pre>
+<h3 id="_5">使用标志</h3>
+<p>在前一个示例中，我们让程序在满足指定条件时就执行特定的任务。但在更复杂的程序中，很多不同的事件都会导致程序停止运行
+在要求很多条件都满足才继续运行的程序中，可定义一个变量，用于判断整个程序是否处于活动状态。这个变量被称为<strong>标志</strong>
+你可让程序在标志为True时继续运行，并在任何事件导致标志的值为False时让程序停止运行。这样，在while语句中就只需检查一个条件——标志的当前值是否为True，并将所有测试（是否发生了应将标志设置为False的事件）都放在其他地方，从而让程序变得更为整洁
+下面来在前一届的程序中添加一个标志，我们吧这个标志命名为active</p>
+<pre><code class="language-python">prompt = &quot;\nTell me something, and I will repeat it back to you:&quot; 
+prompt += &quot;\nEnter 'quit' to end the program. &quot;
+active = True
+while active:
+    message = input(prompt)
+    if message == 'quit': 
+        active = False
+    else: 
+        print(message)
+</code></pre>
+<p>我们将变量active设置成了True，让程序最初处于活动状态。这样做简化了while语句，因为不需要在其中做任何比较——相关的逻辑由程序的其他部分处理。只要变量active为True，循环就将继续运行。在while循环中，我们在用户输入后使用一条if语句来检查变量message的值。如果用户输入的是'quit'，我们就将变量active设置为False，这将导致while循环不再继续执行。如果用户输入的不是'quit'，我们就将输入作为一条消息打印出来</p>
+<h3 id="break">使用break退出循环</h3>
+<p>要立即退出while循环，不再运行循环中余下的代码，也不管条件测试的结果如何，可使用break语句。break语句用于控制程序流程，可使用它来控制哪些代码行将执行，哪些代码行不执行，从而让程序按你的要求执行你要执行的代码
+来看一个让用户指出他到过哪些地方的程序。在这个程序中，我们可以在用户输入'quit'后使用break语句立即退出while循环</p>
+<pre><code class="language-python">rompt = &quot;\nPlease enter the name of a city you have visited:&quot; 
+prompt += &quot;\n(Enter 'quit' when you are finished.) &quot;
+while True: 
+    city = input(prompt) 
+    if city == 'quit': 
+        break
+    else: 
+        print(&quot;I'd love to go to &quot; + city.title() + &quot;!&quot;)
+</code></pre>
+<p>以while True打头的循环将不断运行，直到遇到break语句。这个程序中的循环不断输入用户到过的城市的名字，直到他输入'quit'为止。用户输入'quit'后，将执行break语句，导致Python退出循环</p>
+<h3 id="continue">在循环中使用continue</h3>
+<p>要返回到循环开头，并根据条件测试结果决定是否继续执行循环，可使用continue语句，它不像break语句那样不再执行余下的代码并退出整个循环。例如，来看一个从1数到10，但只打印其中偶数的循环</p>
+<pre><code class="language-python">current_number = 0 
+while current_number &lt; 10:
+    current_number += 1 
+    if current_number % 2 == 0:
+    continue 
+print(current_number)
+</code></pre>
+<p>我们首先将current_number设置成了0，由于它小于10，Python进入while循环。进入循环后，我们以步长1的方式往上数因此current_number为1。接下来，if语句检查current_number与2的求模运算结果。如果结果为0（意味着current_number可被2整除），就执行continue语句，让Python忽略余下的代码，并返回到循环的开头。如果当前的数字不能被2整除，就执行循环中余下的代码，Python将这个数字打印出来</p>
+<h3 id="_6">避免无限循环</h3>
+<p>每个while循环都必须有停止运行的途径，这样才不会没完没了地执行下去
+每个程序员都会偶尔因不小心而编写出无限循环，在循环的退出条件比较微妙时尤其如此。如果程序陷入无限循环，可按Ctrl + C，也可关闭显示程序输出的终端窗口。要避免编写无限循环，务必对每个while循环进行测试，确保它按预期那样结束。如果你希望程序在用户输入特定值时结束，可运行程序并输入这样的值；如果在这种情况下程序没有结束，请检查程序处理这个值的方式，确认程序至少有一个这样的地方能让循环条件为False或让break语句得以执行</p>
+<h5 id="_7">动手试一试</h5>
+<pre><code>7-4 披萨配料：编写一个循环，提示用户输入一系列的比萨配料，并在用户输入'quit'时结束循环。每当用户输入一种配料后，都打印
+一条消息，说我们会在比萨中添加这种配料。
+7-5 电影票：有家电影院根据观众的年龄收取不同的票价：不到3岁的观众免费；3~12岁的观众为10美元；超过12岁的观众为15美元。请
+编写一个循环，在其中询问用户的年龄，并指出其票价。
+7-6 三个出口：以另一种方式完成练习7-4或练习7-5，在程序中采取如下所有做法。在while循环中使用条件测试来结束循环。
+使用变量active来控制循环结束的时机。
+使用break语句在用户输入'quit'时退出循环。
+7-7 无限循环：编写一个没完没了的循环，并运行它（要结束该循环，可按Ctrl +C，也可关闭显示输出的窗口）。
+</code></pre>
+<h2 id="while_2">使用while循环来处理列表和字典</h2>
+<p>到目前为止，我们每次都只处理了一项用户信息：获取用户的输入，再将输入打印出来或作出应答；循环再次运行时，我们获悉另一个输入值并作出响应。然而，要记录大量的用户和信息，需要在while循环中使用列表和字典。for循环是一种遍历列表的有效方式，但在for循环中不应修改列表，否则将导致Python难以跟踪其中的元素。要在遍历列表的同时对其进行修改，可使用while循环。通过将while循环同列表和字典结合起来使用，可收集、存储并组织大量输入，供以后查看和显示</p>
+<h3 id="_8">在列表之间移动元素</h3>
+<p>假设有一个列表，其中包含新注册但还未验证的网站用户；验证这些用户后，如何将他们移到另一个已验证用户列表中呢？一种办法是使用一个while循环，在验证用户的同时将其从未验证用户列表中提取出来，再将其加入到另一个已验证用户列表中。代码可能类似于下面这样</p>
+<pre><code class="language-python"># 首先，创建一个待验证用户列表
+# 和一个用于存储已验证用户的空列表
+unconfirmed_users = ['alice', 'brian', 'candace'] 
+confirmed_users = [] 
+
+# 验证每个用户，直到没有未验证用户为止
+# 将每个经过验证的列表都移到已验证用户列表中
+while unconfirmed_users:
+    current_user = unconfirmed_users.pop() 
+    print(&quot;Verifying user: &quot; + current_user.title())
+    confirmed_users.append(current_user) 
+
+# 显示所有已验证的用户
+print(&quot;\nThe following users have been confirmed:&quot;) 
+for confirmed_user in confirmed_users: 
+    print(confirmed_user.title())
+</code></pre>
+<p>我们首先创建了一个未验证用户列表，其中包含用户Alice、Brian和Candace，还创建了一个空列表，用于存储已验证的用户。while循环将不断地运行，直到列表unconfirmed_users变成空的。在这个循环中，函数pop()以每次一个的方式从列表unconfirmed_users末尾删除未验证的用户。由于Candace位于列表unconfirmed_users末尾，因此其名字将首先被删除、存储到变量current_user中并加入到列表confirmed_users中。接下来是Brian，然后是Alice。为模拟用户验证过程，我们打印一条验证消息并将用户加入到已验证用户列表中。未验证用户列表越来越短，而已验证用户列表越来越长。未验证用户列表为空后结束循环，再打印已验证用户列表</p>
+<h3 id="_9">删除包含特定值的所有列表元素</h3>
+<p>在第3章中，我们使用函数remove()来删除列表中的特定值，这之所以可行，是因为要删除的值在列表中只出现了一次。如果要删除列表中所有包含特定值的元素，该怎么办呢
+假设你有一个宠物列表，其中包含多个值为'cat'的元素。要删除所有这些元素，可不断运行一个while循环，直到列表中不再包含值'cat'</p>
+<pre><code class="language-python">pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets) 
+while 'cat' in pets: 
+    pets.remove('cat') 
+print(pets)
+</code></pre>
+<p>我们首先创建了一个列表，其中包含多个值为'cat'的元素。打印这个列表后，Python进入while循环，因为它发现'cat'在列表中至少出现了一次。进入这个循环后，Python删除第一个'cat'并返回到while代码行，然后发现'cat'还包含在列表中，因此再次进入循环。它不断删除'cat'，直到这个值不再包含在列表中，然后退出循环并再次打印列表</p>
+<h3 id="_10">使用用户输入来填充字典</h3>
+<p>可使用while循环提示用户输入任意数量的信息。下面来创建一个调查程序，其中的循环每次执行时都提示输入被调查者的名字和回答。我们将收集的数据存储在一个字典中，以便将回答同被调查者关联起来</p>
+<pre><code class="language-python">responses = {} 
+
+# 设置一个标志，指出调查是否继续
+polling_active = True 
+
+while polling_active: 
+    # 提示输入被调查者的名字和回答
+    name = input(&quot;\nWhat is your name? &quot;) 
+    response = input(&quot;Which mountain would you like to climb someday? &quot;) 
+
+    # 将答卷存储在字典中
+    responses[name] = response 
+
+    # 看看是否还有人要参与调查
+    repeat = input(&quot;Would you like to let another person respond? (yes/ no) &quot;) 
+    if repeat == 'no': 
+        polling_active = False 
+
+    # 调查结束，显示结果
+print(&quot;\n--- Poll Results ---&quot;)
+for name, response in responses.items(): 
+    print(name + &quot; would like to climb &quot; + response + &quot;.&quot;)
+</code></pre>
+<p>这个程序首先定义了一个空字典（responses），并设置了一个标志（polling_active），用于指出调查是否继续。只要polling_active为True，Python就运行while循环中的代码,在这个循环中，提示用户输入其用户名及其喜欢爬哪座山，将这些信息存储在字典responses中，，然后询问用户调查是否继，如果用户输入yes，程序将再次进入while循环；如果用户输入no，标志polling_active将被设置为False，而while循环将就此结束。最后一个代码块，显示调查结果</p>
+<h5 id="_11">动手试一试</h5>
+<pre><code>7-8 熟食店：创建一个名为sandwich_orders的列表，在其中包含各种三明治的名字；再创建一个名为finished_sandwiches的空列
+表。遍历列表sandwich_orders，对于其中的每种三明治，都打印一条消息，如I made your tuna sandwich，并将其移到列表
+finished_sandwiches。所有三明治都制作好后，打印一条消息，将这些三明治列出来。
+7-9 五香烟熏牛肉（pastrami）卖完了：使用为完成练习7-8而创建的列表sandwich_orders，并确保'pastrami'在其中至少出现了
+三次。在程序开头附近添加这样的代码：打印一条消息，指出熟食店的五香烟熏牛肉卖完了；再使用一个while循环将列表
+sandwich_orders中的'pastrami'都删除。确认最终的列表finished_sandwiches中不包含'pastrami'。
+7-10 梦想的度假胜地：编写一个程序，调查用户梦想的度假胜地。使用类似于“If you could visit one place in the world, 
+where would you go?”的提示，并编写一个打印调查结果的代码块。
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../%E5%AD%97%E5%85%B8/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 字典" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              字典
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E7%B1%BB/" class="md-footer__link md-footer__link--next" aria-label="Next: 类" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              类
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.37e9125f.min.js"></script>
+      
+    
+  </body>
+</html>
